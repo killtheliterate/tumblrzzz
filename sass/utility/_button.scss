@@ -1,0 +1,77 @@
+//
+// @file
+// Button and link styles.
+// ----------------------------------------------------------------------------
+
+// Button base
+// ------------
+
+@mixin button {
+  border-style: solid;
+  border-width: 1px;
+  @include inline-block;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Button sizes
+// ------------
+
+@mixin button--tiny {
+  padding: rhythm(.25, $fs-xxs) 6px;
+  font-family: $ff-sans;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include adjust-font-size-to($fs-xxs);
+}
+
+@mixin button--small {
+  padding: rhythm(1) rhythm(2);
+  font-weight: bold;
+  @include adjust-font-size-to($fs-xxs);
+  @include border-radius($radius-s);
+}
+
+@mixin button--medium {
+  padding: rhythm(.5, $fs-l) 13px;
+  font-weight: bold;
+  @include adjust-font-size-to($fs-m, 4);
+  @include border-radius($radius-s);
+}
+
+@mixin button--large {
+  padding: rhythm(1, $fs-l) 18px;
+  font-weight: bold;
+  @include adjust-font-size-to($fs-l);
+  @include border-radius($radius-s);
+}
+
+@mixin button--primary {
+  background-color: $clr-btn--primary;
+  border-color: blend-overlay(rgba($black, .25), $clr-btn--primary);
+  color: mix($white, $clr-btn--primary, 85%);
+
+  &:hover {
+    color: $white;
+  }
+
+  &:active {
+    background-color: blend-overlay(rgba($black, .1), $clr-btn--primary);
+  }
+}
+
+@mixin button--secondary {
+  background-color: $clr-btn--secondary;
+  border-color: blend-overlay(rgba($black, .25), $clr-btn--secondary);
+  color: mix($white, $clr-btn--secondary, 85%);
+
+  &:hover {
+    color: $white;
+  }
+
+  &:active {
+    background-color: blend-overlay(rgba($black, .1), $clr-btn--secondary);
+  }
+}

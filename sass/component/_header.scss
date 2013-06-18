@@ -1,0 +1,17 @@
+//
+// @file
+// Header component.
+// ---------------------------------------------------------------------------
+.header {
+
+  // Override JS effect.
+  @include breakpoint($mobile-wide, $no-query: '.lt-ie9') {
+    .dropdown-toggle {
+      // @include invisible;
+    }
+
+    .dropdown-content {
+      display: block !important;
+    }
+  }
+}

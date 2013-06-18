@@ -1,0 +1,14 @@
+//
+// @file
+// Page layout styles.
+//
+// This file should contain the global layout styles for how regions
+// relate to one another on a given page.
+// ---------------------------------------------------------------------------
+.l-constrained {
+  @include set-grid($grid-mobile);
+
+  @include breakpoint($tablet, $no-query: '.lt-ie9') {
+    @include use-grid($grid-tablet);
+  }
+}

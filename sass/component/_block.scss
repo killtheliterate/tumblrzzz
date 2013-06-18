@@ -1,0 +1,18 @@
+//
+// @file
+// Block component.
+// ---------------------------------------------------------------------------
+// Block.
+.block {
+  margin-bottom: rhythm(4);
+}
+
+.block-content {
+  @include clearfix;
+}
+
+.block-title {
+  margin-bottom: rhythm(3, $fs-xl);
+  font-family: $ff-heading;
+  @include adjust-font-size-to($fs-xl);
+}

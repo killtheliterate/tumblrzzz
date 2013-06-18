@@ -1,0 +1,63 @@
+//
+// @file
+// List component.
+// ---------------------------------------------------------------------------
+// No bullets.
+%no-bullets {
+
+  // .list
+  > ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  // .list-item
+  > ul > li {
+    list-style: none;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Generic content list.
+.item-list {
+  @extend %no-bullets;
+
+  .list > .list-item {
+    margin-bottom: rhythm(4);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Generic content list.
+.item-list--inline {
+  @extend %no-bullets;
+
+  > .list > .list-item {
+    margin: 0;
+    padding: 0 $w-gutter-half;
+    @include inline-block;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Generic content list.
+.item-list--flex {
+  @extend .item-list--inline !optional;
+  @include nup-container;
+
+  > .list {
+    width: 100%;
+    @include nup-base();
+  }
+
+  > .list > .list-item {
+    float: left;
+    padding: $w-gutter-half;
+    @include nup-item(5);
+    @include trailer(0);
+  }
+}

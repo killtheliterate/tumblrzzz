@@ -1,0 +1,30 @@
+//
+// @file
+// Dropdown component.
+// ---------------------------------------------------------------------------
+.dropdown {
+  .js & .dropdown-content {
+    display: none;
+    @include transition-property(bottom);
+    @include transition-duration(.5s);
+    @include single-transition;
+  }
+
+  .js &.is-expanded .dropdown-content {
+    display: block;
+    @include single-transition;
+  }
+}
+
+.dropdown-toggle {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  @include border-box;
+}
+
+.dropdown-content {
+  padding: 0;
+}
+

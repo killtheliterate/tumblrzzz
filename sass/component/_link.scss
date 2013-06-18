@@ -1,0 +1,59 @@
+//
+// @file
+// Link component.
+// ---------------------------------------------------------------------------
+// Link button.
+%link--button {
+  @include button;
+  @include button--large;
+  @include button--primary;
+}
+
+.link--button {
+  @extend %link--button;
+}
+
+// ---------------------------------------------------------------------------
+// Link button small.
+%link--button-small {
+  @include button;
+  @include button--small;
+  @include button--primary;
+}
+
+.link--button-small {
+  @extend %link--button-small;
+}
+
+// ---------------------------------------------------------------------------
+// Link block.
+%link--block {
+  display: block;
+  @include border-box;
+}
+
+.link--block {
+  @extend %link--block;
+}
+
+// ---------------------------------------------------------------------------
+// Link pill.
+%link--pill {
+  display: block;
+  padding: rhythm(1) rhythm(2);
+  color: $gray;
+  background: $gray-light;
+  font-weight: bold;
+  @include border-box;
+  @include border-radius($radius-s);
+  @include adjust-font-size-to($fs-s);
+
+  &.active {
+    color: $white;
+    background: $gray-dark;
+  }
+}
+
+.link--pill {
+  @extend %link--pill;
+}

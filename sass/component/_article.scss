@@ -1,0 +1,18 @@
+//
+// @file
+// Article component.
+// ---------------------------------------------------------------------------
+// Block.
+.article {
+  margin-bottom: rhythm(4);
+}
+
+.article-content {
+  @include clearfix;
+}
+
+.article-title {
+  margin-bottom: rhythm(3, $fs-xl);
+  font-family: $ff-heading;
+  @include adjust-font-size-to($fs-xl);
+}
