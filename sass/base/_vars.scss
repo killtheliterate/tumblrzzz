@@ -73,27 +73,25 @@ $base-line-height: 6px;
 
 // Grid.
 $grid-mobile: 90% 4 (4em 1em) after;
-// $grid-mobile-wide: 90% 4 1/4 after;
+$grid-mobile-wide: 90% 4 1/4 after;
 $grid-tablet: 90% 4 (4em 1em) after;
-// $grid-tablet-wide: 90% 4 1/4 after;
-// $grid-desktop: 90% 4 1/4 after;
-// $grid-desktop-wide: 90% 4 1/4 after;
+$grid-tablet-wide: 90% 4 1/4 after;
+$grid-desktop: 90% 4 1/4 after;
+$grid-desktop-wide: 90% 4 1/4 after;
 
 // Breakpoint.
 $mobile: 480px;
 $mobile-wide: 600px;
 $tablet: 768px;
-// $tablet-wide: 992px;
-// $desktop: 1080px;
-// $desktop-wide: 1382px;
+$tablet-wide: 992px;
+$desktop: 1080px;
+$desktop-wide: 1382px;
+
+$show-grids: false;
 
 // Width.
 $w-gutter:1em;
 $w-gutter-half:.5em;
-
-// Set grid.
-
-//----------------------------------------------------------------------------
 
 //----------------------------------------------------------------------------
 // Z-Index.

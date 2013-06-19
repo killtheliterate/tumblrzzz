@@ -7,8 +7,10 @@
 // ---------------------------------------------------------------------------
 .l-constrained {
   @include set-grid($grid-mobile);
+  @include container($grid-mobile);
 
   @include breakpoint($tablet, $no-query: '.lt-ie9') {
     @include use-grid($grid-tablet);
+    @include container($grid-tablet);
   }
 }

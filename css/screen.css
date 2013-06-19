@@ -558,6 +558,31 @@ tr.even {
   background-color: transparent;
 }
 
+.l-constrained {
+  *zoom: 1;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.l-constrained:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 768px) {
+  .l-constrained {
+    *zoom: 1;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .l-constrained:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 .article {
   margin-bottom: 1.33333em;
 }
