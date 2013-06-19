@@ -26,17 +26,6 @@
 }
 
 // ---------------------------------------------------------------------------
-// Link block.
-%link--block {
-  display: block;
-  @include border-box;
-}
-
-.link--block {
-  @extend %link--block;
-}
-
-// ---------------------------------------------------------------------------
 // Link pill.
 %link--pill {
   display: block;

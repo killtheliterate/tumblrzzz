@@ -30,10 +30,10 @@
 </head>
 <body>
   <div class="l-constrained">
-    {block:HasPages}
     <section class="dropdown header">
-      <h1 class="dropdown-toggle">Navigation</h1>
+      <h1 class="dropdown-toggle">{Title}</h1>
       <div class="utility">
+        {block:HasPages}
         <nav>
           <ul class="nav-main">
             {block:Pages}
@@ -41,6 +41,7 @@
             {/block:Pages}
           </ul>
         </nav>
+        {/block:HasPages}
 
         <form action="/search" method="get">
           <input type="text" name="q" value="{SearchQuery}" placeholder="Search"/>
@@ -49,83 +50,95 @@
 
       </div>
     </section>
-    {/block:HasPages}
 
     <section class="item-list">
       <ul class="list">
         {block:Posts}
         {block:Text}
         <li class="list-item">
-        {block:Title}
-          <h2 class="article-title"><a href="{Permalink}">{Title}</a></h2>
-        {/block:Title}
-          {Body}
+          <article class="article article--text">
+          {block:Title}
+            <h2 class="article-title"><a href="{Permalink}">{Title}</a></h2>
+          {/block:Title}
+            <div class="article-content">{Body}</div>
+          </article>
         </li>
         {/block:Text}
 
         {block:Photo}
         <li class="list-item">
-          <article class="article">
-            <img src="{PhotoURL-500}" alt="{PhotoAlt}" class="article-image" />
-            {block:Caption}
-            <div class="image-caption">{Caption}</div>
-            {/block:Caption}
+          <article class="article article--photo">
+            <div class="article-content">
+              <img src="{PhotoURL-500}" alt="{PhotoAlt}" class="article-image" />
+              {block:Caption}
+              <div class="image-caption">{Caption}</div>
+              {/block:Caption}
+            </div>
           </article>
         </li>
         {/block:Photo}
 
         {block:Panorama}
         <li class="list-item">
-          <article class="article">
-            {LinkOpenTag}
-            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" class="article-image"/>
-            {LinkCloseTag}
-            {block:Caption}
-            <div class="image-caption">{Caption}</div>
-            {/block:Caption}
+          <article class="article article--panorama">
+            <div class="article-content">
+              {LinkOpenTag}
+              <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" class="article-image"/>
+              {LinkCloseTag}
+              {block:Caption}
+              <div class="image-caption">{Caption}</div>
+              {/block:Caption}
+            </div>
           </article>
         </li>
         {/block:Panorama}
 
         {block:Photoset}
         <li class="list-item">
-          <article class="article">
-            {Photoset-500}
-            {block:Caption}
-            <div class="image-caption">{Caption}</div>
-            {/block:Caption}
+          <article class="article article--photoset">
+            <div class="article-content">
+              {Photoset-500}
+              {block:Caption}
+              <div class="image-caption">{Caption}</div>
+              {/block:Caption}
+            </div>
           </article>
         </li>
         {/block:Photoset}
 
         {block:Quote}
         <li class="list-item">
-          <article class="article">
-            &ldquo;{Quote}&rdquo;
-            {block:Source}
-            <div class="">{Source}</div>
-            {/block:Source}
-            </article>
-          </li>
+          <article class="article article--quote">
+            <div class="article-content">
+              &ldquo;{Quote}&rdquo;
+              {block:Source}
+              <div class="">{Source}</div>
+              {/block:Source}
+            </div>
+          </article>
+        </li>
         {/block:Quote}
 
         {block:Link}
         <li class="list-item">
-          <article class="article">
-            <a href="{URL}" class="" {Target}>{Name}</a>
-            {block:Description}
-            <div class="">{Description}</div>
-            {/block:Description}
+          <article class="article article--link">
+            <div class="article-content">
+              <a href="{URL}" class="" {Target}>{Name}</a>
+              {block:Description}
+              <div class="">{Description}</div>
+              {/block:Description}
+            </div>
           </article>
         </li>
         {/block:Link}
 
         {block:Chat}
         <li class="list-item">
-          <article class="article">
-          {block:Title}
-            <h2 class="article-title"><a href="{Permalink}">{Title}</a></h2>
-          {/block:Title}
+          <article class="article article--chat">
+            <div class="article-content">
+            {block:Title}
+              <h2 class="article-title"><a href="{Permalink}">{Title}</a></h2>
+            {/block:Title}
             <ul class="">
               {block:Lines}
               <li class="{Alt} user_{UserNumber}">
@@ -142,7 +155,7 @@
 
         {block:Video}
         <li class="post video">
-          <article class="article">
+          <article class="article article--video">
             {Video-500}
             {block:Caption}
             <div class="video-caption">{Caption}</div>
@@ -153,7 +166,7 @@
 
         {block:Audio}
         <li class="list-item">
-          <article class="article">
+          <article class="article article--audio">
             {AudioPlayerBlack}
             {block:Caption}
             <div class="audio-caption">{Caption}</div>

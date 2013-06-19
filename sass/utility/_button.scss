@@ -1,11 +1,10 @@
 //
 // @file
 // Button and link styles.
-// ----------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 
-// Button base
-// ------------
-
+// Button base.
+// ---------------------------------------------------------------------------
 @mixin button {
   border-style: solid;
   border-width: 1px;
@@ -16,9 +15,8 @@
   }
 }
 
-// Button sizes
-// ------------
-
+// Button sizes.
+// ---------------------------------------------------------------------------
 @mixin button--tiny {
   padding: rhythm(.25, $fs-xxs) 6px;
   font-family: $ff-sans;
@@ -48,6 +46,8 @@
   @include border-radius($radius-s);
 }
 
+// Button colors.
+// ---------------------------------------------------------------------------
 @mixin button--primary {
   background-color: $clr-btn--primary;
   border-color: blend-overlay(rgba($black, .25), $clr-btn--primary);

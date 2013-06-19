@@ -4,7 +4,10 @@
 //
 // Mixins for creating simple equal column grids of elements
 // ---------------------------------------------------------------------------
+
+// Nup container.
 // Use this on the outer container element.
+// ---------------------------------------------------------------------------
 @mixin nup-container($gutter: $w-gutter-half) {
 
   // Contain floated elements.
@@ -16,7 +19,9 @@
   margin-left: -1 * $gutter;
 }
 
+// Nup base.
 // Use this on the column element.  It's typically only needed once.
+// ---------------------------------------------------------------------------
 @mixin nup-base($gutter: $w-gutter-half) {
   float: left;
   padding: 0 $gutter;
@@ -25,8 +30,10 @@
   @include border-box;
 }
 
+// Nup item.
 // Use this on the column element.  This can be applied with different column
 // values at different breakpoints.
+// ---------------------------------------------------------------------------
 @mixin nup-item($columns: 2) {
   // Create equal width columns.
   width: 100% / $columns;

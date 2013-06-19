@@ -19,7 +19,6 @@
 // @import "icon/*.png";
 @import "utility/border-box";
 @import "utility/button";
-@import "utility/calc";
 @import "utility/clearfix";
 @import "utility/invisible";
 @import "utility/nup";
@@ -36,12 +35,10 @@
 
 //----------------------------------------------------------------------------
 // Libraries.
-@import "library/prism";
 
 //----------------------------------------------------------------------------
 // Components.
 @import "component/article";
-@import "component/block";
 @import "component/dropdown";
 @import "component/garbage";
 @import "component/header";
@@ -51,4 +48,3 @@
 @import "component/meta";
 @import "component/nav";
 @import "component/pager";
-@import "component/table";
